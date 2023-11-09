@@ -27,12 +27,12 @@ $ yarn start
 - Docs: Pr template
 - Public: Locales, images
 - Src: Contain source code
-  - Apis: Contain apis from firebase
-  - Components: Contain component used in many pages
-  - Constants: Store constants
-  - Enums: Store enums
-  - Interfaces: Store interfaces
+  - Apis: Store apis from firebase
+  - Components: Store component used in many pages
+  - Constants: Store constants used in many components
+  - Enums: Store enums used in many components
+  - Interfaces: Store interfaces used in many components
   - Layouts: Store layouts used in many pages
-  - Pages: Contain page components
+  - Pages: Store page components
   - Server: Connect to firebase
-  - Utils: Store logic function used in many pages
+  - Utils: Store logic functions used in many pages
