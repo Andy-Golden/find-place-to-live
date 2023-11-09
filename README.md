@@ -10,11 +10,15 @@
 - Storybook: Show how to use components
 - I18n: Translate english and vietnamese
 
-## 🛠️ Config
+## 📦 Steps to set up
 
-- Create env file follow env example
+- Step 1
 
-## 📦 Install
+  - Follow .env.example to create .env file
+
+- Step 2
+
+  - Run below commands
 
 ```bash
 # yarn
