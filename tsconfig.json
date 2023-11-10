@@ -24,7 +24,8 @@
       "@store": ["./store/index"],
       "@apis": ["./apis/index"],
       "@utils": ["./utils/index"],
-      "@server": ["./server/index"]
+      "@server": ["./server/index"],
+      "@interfaces": ["./interfaces/index"]
     }
   },
   "include": ["src"]
