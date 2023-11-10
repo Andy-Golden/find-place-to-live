@@ -1,9 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
+import * as Sentry from "@sentry/react";
 
+import { ErrorFallbackCard } from "@components";
 import { App } from "@pages";
 import { store } from "@store";
+
+import "./sentry";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -14,9 +18,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <Sentry.ErrorBoundary fallback={<ErrorFallbackCard />}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </Sentry.ErrorBoundary>
   </React.StrictMode>,
 );
 

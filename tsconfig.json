@@ -19,6 +19,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@components": ["./components/index"],
+      "@constants": ["./constants/index"],
       "@pages": ["./pages/index"],
       "@layouts": ["./layouts/index"],
       "@store": ["./store/index"],

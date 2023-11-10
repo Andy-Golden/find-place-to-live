@@ -4,7 +4,7 @@ import { useAppPrepareHook } from "./helper";
 
 import "./App.css";
 
-function App(): JSX.Element {
+const App = (): JSX.Element => {
   const { users } = useAppPrepareHook();
 
   return (
@@ -18,6 +18,6 @@ function App(): JSX.Element {
       ))}
     </div>
   );
-}
+};
 
 export default App;

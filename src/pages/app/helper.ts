@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { IUser } from "@interfaces";
+import * as Sentry from "@sentry/react";
 
 import { getUsers } from "@apis";
 
@@ -17,8 +18,7 @@ const useAppPrepareHook = (): IAppPrepareHook => {
       const data = await getUsers();
       setUsers(data);
     } catch (error) {
-      // TODO: this error will be handled in another branch
-      console.log("🚀 ~ file: helper.ts:21 ~ getUserList ~ error:", error);
+      Sentry.captureException(error);
     }
   };
 
