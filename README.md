@@ -28,15 +28,21 @@ $ yarn start
 
 ## 📁 Directory structure
 
-- Docs: Pr template
-- Public: Locales, images
-- Src: Contain source code
-  - Apis: Store apis from firebase
-  - Components: Store component used in many pages
-  - Constants: Store constants used in many components
-  - Enums: Store enums used in many components
-  - Interfaces: Store interfaces used in many components
-  - Layouts: Store layouts used in many pages
-  - Pages: Store page components
-  - Server: Connect to firebase
-  - Utils: Store logic functions used in many pages
+```sh
+
+├──docs/
+│ └── pull_request_template.md
+├──public/
+│ ├──locales/
+  └──images/
+└──src/
+  ├──apis/ # Using to store api call from firebase
+  ├──components/ # Using to component used in many pages
+  ├──interfaces/  # Using to store interfaces used in many file
+  ├──layouts/ # Store layouts used in many pages
+  ├──server/ # Store Firebase config
+  ├──store/ # Store reducer, slice from redux
+  ├──Utils/ # Store logic function used in many pages
+  │
+  └── index.tsx
+```
