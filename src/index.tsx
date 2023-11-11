@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import * as Sentry from "@sentry/react";
-import ToastProvider from "providers/toast-provider";
 
 import { ErrorFallbackCard } from "@components";
 import { App } from "@pages";
+import { ToastProvider } from "@providers";
 import { store } from "@store";
 
 import "./sentry";

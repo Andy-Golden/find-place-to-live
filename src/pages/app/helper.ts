@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import type { IUser } from "@interfaces";
 import * as Sentry from "@sentry/react";
-import { ToastContext } from "contexts/toast-context";
 import type { FirebaseError } from "firebase/app";
 
 import { getUsers } from "@apis";
+import { ToastContext } from "@providers";
 
 import type { IAppPrepareHook } from "./interfaces";
 

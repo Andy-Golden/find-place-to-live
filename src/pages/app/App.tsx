@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { ToastContext } from "contexts/toast-context";
+
+import { ToastContext } from "@providers";
 
 import { useAppPrepareHook } from "./helper";
 
