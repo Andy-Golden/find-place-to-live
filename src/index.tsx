@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import * as Sentry from "@sentry/react";
+import ToastProvider from "providers/toast-provider";
 
 import { ErrorFallbackCard } from "@components";
 import { App } from "@pages";
@@ -19,9 +20,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Sentry.ErrorBoundary fallback={<ErrorFallbackCard />}>
-      <Provider store={store}>
-        <App />
-      </Provider>
+      <ToastProvider>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </ToastProvider>
     </Sentry.ErrorBoundary>
   </React.StrictMode>,
 );

@@ -26,7 +26,6 @@ const getUsers = async (): Promise<IUser[]> => {
       return user;
     });
 
-    // throw new Error("Error test");
     return users;
   } catch (error) {
     const err = error as FirebaseError;

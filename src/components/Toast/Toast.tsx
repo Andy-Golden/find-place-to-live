@@ -1,19 +1,12 @@
 import React from "react";
 
-import { useToastPrepareHook } from "./helper";
 import type { IToastProps } from "./interfaces";
 
 import "./styles.scss";
 
-const Toast = ({ type, message, visible }: IToastProps): JSX.Element => {
-  const { isDisplay, onHideToast } = useToastPrepareHook(visible);
-
+const Toast = ({ type, message, onHideToast }: IToastProps): JSX.Element => {
   return (
-    <div
-      className={`toast ${
-        isDisplay ? "toast--show" : "toast--hide"
-      } progress-${type}`}
-    >
+    <div className={`toast toast--show progress-${type}`}>
       {type === "success" && (
         <span className="success">
           <i className="fas fa-check-circle"></i>

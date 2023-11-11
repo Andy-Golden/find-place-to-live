@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ToastContext } from "contexts/toast-context";
 
 import { useAppPrepareHook } from "./helper";
 
@@ -6,17 +7,23 @@ import "./App.scss";
 
 const App = (): JSX.Element => {
   const { users } = useAppPrepareHook();
-  const a: any = undefined;
+
+  const toast = useContext(ToastContext);
+
+  const handleShow = (): void => {
+    toast.open("Error toast");
+  };
 
   return (
     <div className="App">
       {users.map((user) => (
         <ul key={user.id}>
           <li>{user.fullname}</li>
-          <li>{a.email}</li>
+          <li>{user.email}</li>
           <li>{user.role}</li>
         </ul>
       ))}
+      <button onClick={handleShow}>show toast</button>
     </div>
   );
 };
