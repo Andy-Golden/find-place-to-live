@@ -39,12 +39,11 @@ $ yarn start
   ├──apis/ # Using to store api call from firebase
   ├──assets/ # Using to store stylesheets
   ├──components/ # Using to component used in many pages
-  ├──constants/ # Using to component used in many pages
+  ├──constants/ # Using to constants used in many pages
   ├──interfaces/  # Using to store interfaces used in many file
   ├──layouts/ # Store layouts used in many pages
   ├──server/ # Store Firebase config
   ├──store/ # Store reducer, slice from redux
-  ├──utils/ # Store logic function used in many pages
   │
   └── index.tsx
 ```
