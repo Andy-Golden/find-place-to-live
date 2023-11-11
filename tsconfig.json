@@ -27,8 +27,7 @@
       "@utils": ["./utils/index"],
       "@server": ["./server/index"],
       "@interfaces": ["./interfaces/index"],
-      "@assets": ["./assets/index"],
-      "@enums": ["./enums/index"]
+      "@assets": ["./assets/index"]
     }
   },
   "include": ["src"]
