@@ -38,7 +38,7 @@
           ["^react", "^@?\\w"],
           // Internal packages.
           [
-            "^(@|@components|@constants|@pages|@store|@server|@interfaces|@apis)(/.*|$)"
+            "^(@|@components|@constants|@pages|@store|@server|@interfaces|@apis|@assets|@enums|@utils)(/.*|$)"
           ],
           // Side effect imports.
           ["^\\u0000"],

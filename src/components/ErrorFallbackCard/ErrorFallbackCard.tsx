@@ -1,7 +1,13 @@
 import React from "react";
 
+import "./styles.scss";
+
 const ErrorFallbackCard = (): JSX.Element => {
-  return <h1 style={{ textAlign: "center" }}>Something went wrong</h1>;
+  return (
+    <div>
+      <h1 style={{ textAlign: "center" }}>Something went wrong</h1>;
+    </div>
+  );
 };
 
 export default ErrorFallbackCard;

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { IUser } from "@interfaces";
 import * as Sentry from "@sentry/react";
+import type { FirebaseError } from "firebase/app";
 
 import { getUsers } from "@apis";
 
@@ -18,7 +19,8 @@ const useAppPrepareHook = (): IAppPrepareHook => {
       const data = await getUsers();
       setUsers(data);
     } catch (error) {
-      Sentry.captureException(error);
+      const err = error as FirebaseError;
+      Sentry.captureException(err);
     }
   };
 

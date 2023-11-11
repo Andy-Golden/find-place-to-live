@@ -38,6 +38,7 @@ $ yarn start
 └──src/
   ├──apis/ # Using to store api call from firebase
   ├──components/ # Using to component used in many pages
+  ├──constants/ # Using to component used in many pages
   ├──interfaces/  # Using to store interfaces used in many file
   ├──layouts/ # Store layouts used in many pages
   ├──server/ # Store Firebase config

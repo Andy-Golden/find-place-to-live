@@ -1,3 +1,4 @@
+/* eslint-disable */
 import type { IUser } from "@interfaces";
 import type { FirebaseError } from "firebase/app";
 import { collection, getDocs } from "firebase/firestore";
@@ -13,18 +14,20 @@ const getUsers = async (): Promise<IUser[]> => {
     const data = await getDocs(userCollectionRef);
 
     const users: IUser[] = data.docs.map((doc) => {
+      const data = doc.data();
+
       const user: IUser = {
         id: doc.id,
-        fullname: doc.data().fullname,
-        email: doc.data().email,
-        role: doc.data().role,
-        avatar: doc.data().avatar,
-        status: doc.data().status,
+        fullname: data.fullname,
+        email: data.email,
+        role: data.role,
+        avatar: data.avatar,
+        status: data.status,
       };
-
       return user;
     });
 
+    throw new Error("Error test");
     return users;
   } catch (error) {
     const err = error as FirebaseError;

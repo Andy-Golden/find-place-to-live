@@ -2,7 +2,7 @@ import React from "react";
 
 import { useAppPrepareHook } from "./helper";
 
-import "./App.css";
+import "./App.scss";
 
 const App = (): JSX.Element => {
   const { users } = useAppPrepareHook();
