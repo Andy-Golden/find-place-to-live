@@ -1,4 +1,3 @@
-/* eslint-disable */
 import type { IUser } from "@interfaces";
 import type { FirebaseError } from "firebase/app";
 import { collection, getDocs } from "firebase/firestore";
@@ -27,7 +26,7 @@ const getUsers = async (): Promise<IUser[]> => {
       return user;
     });
 
-    throw new Error("Error test");
+    // throw new Error("Error test");
     return users;
   } catch (error) {
     const err = error as FirebaseError;

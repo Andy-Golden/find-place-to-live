@@ -1,12 +1,23 @@
 :root {
+  --bg-white-1: #fff;
   --bg-red-1: #ff0000;
   --bg-green-1: #008000;
   --bg-gray-1: #d3d3d3;
+  --bg-black-1: #64646f33;
+  --bg-blue-1: #0046d5;
 
+  --text-white-1: #fff;
   --text-red-1: #ff0000;
   --text-green-1: #008000;
+
+  --font-size-1: 1.5rem;
 }
 
 body {
   margin: 0;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
 }

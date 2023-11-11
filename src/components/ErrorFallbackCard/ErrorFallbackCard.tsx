@@ -4,8 +4,18 @@ import "./styles.scss";
 
 const ErrorFallbackCard = (): JSX.Element => {
   return (
-    <div>
-      <h1 style={{ textAlign: "center" }}>Something went wrong</h1>;
+    <div className="error-fallback-container">
+      <div className="error-card">
+        <h1 className="title">Oops!</h1>
+        <span className="content">Something went wrong</span>
+        <button
+          onClick={() => {
+            location.reload();
+          }}
+        >
+          Reload
+        </button>
+      </div>
     </div>
   );
 };
