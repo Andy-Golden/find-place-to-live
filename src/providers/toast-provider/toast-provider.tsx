@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Toast } from "@components";
-import { toastStatus } from "@enums";
 
 import { useToastProvidePrepareHook } from "./helper";
 import type { IToastProviderProps } from "./interfaces";
@@ -21,7 +20,7 @@ const ToastProvider = ({ children }: IToastProviderProps): JSX.Element => {
               return (
                 <Toast
                   key={toast.id}
-                  type={toastStatus.ERROR}
+                  type={toast.status}
                   message={toast.message}
                   onHideToast={() => {
                     onCloseToast(toast.id);

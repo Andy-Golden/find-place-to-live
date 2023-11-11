@@ -1,7 +1,7 @@
-import type { toastStatus } from "@enums";
+import type { ToastStatusType } from "@enums";
 
 export interface IToastProps {
-  type: toastStatus.ERROR | toastStatus.SUCCESS;
+  type: ToastStatusType;
   message: string;
   onHideToast: () => void;
 }

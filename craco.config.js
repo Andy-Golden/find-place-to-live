@@ -13,7 +13,6 @@ module.exports = {
       "@server": path.resolve(__dirname, "src/server"),
       "@interfaces": path.resolve(__dirname, "src/interfaces"),
       "@assets": path.resolve(__dirname, "src/assets"),
-      "@utils": path.resolve(__dirname, "src/utils"),
       "@enums": path.resolve(__dirname, "src/enums"),
       "@providers": path.resolve(__dirname, "src/providers"),
     },

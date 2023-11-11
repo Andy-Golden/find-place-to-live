@@ -1,14 +1,16 @@
 import { useMemo, useState } from "react";
+import type { ToastStatusType } from "@enums";
 
 import type { IToast, IToastProviderPrepareHook } from "./interfaces";
 
 const useToastProvidePrepareHook = (): IToastProviderPrepareHook => {
   const [toasts, setToasts] = useState<IToast[]>([]);
 
-  const openToast = (message: string): void => {
+  const openToast = (message: string, status: ToastStatusType): void => {
     const newToast = {
       id: Date.now(),
       message,
+      status,
     };
     setToasts((prev) => [...prev, newToast]);
   };

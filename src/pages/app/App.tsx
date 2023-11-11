@@ -1,6 +1,4 @@
-import React, { useContext } from "react";
-
-import { ToastContext } from "@providers";
+import React from "react";
 
 import { useAppPrepareHook } from "./helper";
 
@@ -8,12 +6,6 @@ import "./App.scss";
 
 const App = (): JSX.Element => {
   const { users } = useAppPrepareHook();
-
-  const toast = useContext(ToastContext);
-
-  const handleShow = (): void => {
-    toast.open("Error toast");
-  };
 
   return (
     <div className="App">
@@ -24,7 +16,6 @@ const App = (): JSX.Element => {
           <li>{user.role}</li>
         </ul>
       ))}
-      <button onClick={handleShow}>show toast</button>
     </div>
   );
 };

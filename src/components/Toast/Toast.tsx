@@ -1,5 +1,7 @@
 import React from "react";
 
+import { ToastStatus } from "@enums";
+
 import type { IToastProps } from "./interfaces";
 
 import "./styles.scss";
@@ -7,12 +9,12 @@ import "./styles.scss";
 const Toast = ({ type, message, onHideToast }: IToastProps): JSX.Element => {
   return (
     <div className={`toast toast--show progress-${type}`}>
-      {type === "success" && (
+      {type === ToastStatus.SUCCESS && (
         <span className="success">
           <i className="fas fa-check-circle"></i>
         </span>
       )}
-      {type === "error" && (
+      {type === ToastStatus.ERROR && (
         <span className="error">
           <i className="fas fa-times-circle"></i>
         </span>

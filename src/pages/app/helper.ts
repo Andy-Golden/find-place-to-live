@@ -4,6 +4,7 @@ import * as Sentry from "@sentry/react";
 import type { FirebaseError } from "firebase/app";
 
 import { getUsers } from "@apis";
+import { ToastStatus } from "@enums";
 import { ToastContext } from "@providers";
 
 import type { IAppPrepareHook } from "./interfaces";
@@ -23,7 +24,7 @@ const useAppPrepareHook = (): IAppPrepareHook => {
     } catch (error) {
       const err = error as FirebaseError;
       Sentry.captureException(error);
-      toast.open(err.message);
+      toast.open(err.message, ToastStatus.ERROR);
     }
   };
 
