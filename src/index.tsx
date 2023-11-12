@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
+import { RouterProvider } from "react-router-dom";
 import * as Sentry from "@sentry/react";
+import router from "router";
 
 import { ErrorFallbackCard } from "@components";
-import { App } from "@pages";
 import { ToastProvider } from "@providers";
 import { store } from "@store";
 
@@ -13,7 +14,6 @@ import "./sentry";
 import reportWebVitals from "./reportWebVitals";
 
 import "./index.scss";
-
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
@@ -22,7 +22,7 @@ root.render(
     <Sentry.ErrorBoundary fallback={<ErrorFallbackCard />}>
       <ToastProvider>
         <Provider store={store}>
-          <App />
+          <RouterProvider router={router} />
         </Provider>
       </ToastProvider>
     </Sentry.ErrorBoundary>
