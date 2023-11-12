@@ -1,0 +1,44 @@
+import type { IUser, IUserSignUpRequest } from "@interfaces";
+import type { FirebaseError } from "firebase/app";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { addDoc, collection } from "firebase/firestore";
+
+import { UserRole, UserStatus } from "@enums";
+import { auth, db } from "@server";
+
+import { Collections } from "./collections";
+
+const userCollectionRef = collection(db, Collections.USER);
+
+const signUp = async (
+  userSignUpRequest: IUserSignUpRequest,
+): Promise<IUser> => {
+  try {
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      userSignUpRequest.email,
+      userSignUpRequest.password,
+    );
+
+    const user: Omit<IUser, "id"> = {
+      fullname: userSignUpRequest.fullname,
+      email: userCredential.user.email ?? "",
+      role: UserRole.USER,
+      avatar: "",
+      status: UserStatus.ACTIVE,
+    };
+
+    const data = await addDoc(userCollectionRef, user);
+    console.log("🚀 ~ file: auth.api.ts:27 ~ data:", data);
+
+    return {
+      id: data.id,
+      ...user,
+    };
+  } catch (error) {
+    const err = error as FirebaseError;
+    throw new Error(err.message);
+  }
+};
+
+export { signUp };

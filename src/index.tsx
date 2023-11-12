@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import * as Sentry from "@sentry/react";
 
 import { ErrorFallbackCard } from "@components";
-import { App } from "@pages";
+import { App, SignUpPage } from "@pages";
 import { ToastProvider } from "@providers";
 import { store } from "@store";
 
@@ -23,6 +23,7 @@ root.render(
       <ToastProvider>
         <Provider store={store}>
           <App />
+          <SignUpPage />
         </Provider>
       </ToastProvider>
     </Sentry.ErrorBoundary>
