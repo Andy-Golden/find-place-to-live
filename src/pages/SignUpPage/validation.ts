@@ -1,20 +1,19 @@
-import i18n from "i18next";
 import * as Yup from "yup";
 
 import { strongPassword } from "@constants";
 
 const schema = Yup.object().shape({
-  fullname: Yup.string().required(i18n.t`error.requiredFullname`),
+  fullname: Yup.string().required("error.requiredFullname"),
   email: Yup.string()
-    .email(i18n.t`error.notValidEmail`)
-    .required(i18n.t`error.requiredEmail`),
+    .email("error.notValidEmail")
+    .required("error.requiredEmail"),
   password: Yup.string()
-    .min(6)
-    .required(i18n.t`error.requiredPassword`)
-    .matches(strongPassword, i18n.t`error.strongerPassword`),
+    .min(6, "error.passwordMustContain6Chars")
+    .required("error.requiredPassword")
+    .matches(strongPassword, "error.strongerPassword"),
   confirmation: Yup.string()
-    .required(i18n.t`error.requiredConfirmation`)
-    .oneOf([Yup.ref("password")], i18n.t`error.passwordsMustMatch`),
+    .required("error.requiredConfirmation")
+    .oneOf([Yup.ref("password")], "error.passwordsMustMatch"),
 });
 
 export default schema;

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ErrorMessage } from "@hookform/error-message";
 
 import { SelectLanguage } from "@common";
 import { Button, TextInput } from "@components";
@@ -19,7 +20,7 @@ const SignUpPage = (): JSX.Element => {
         // eslint-disable-next-line @typescript-eslint/no-misused-promises
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div className="lang-layout">
+        <div className="lang-form-layout">
           <SelectLanguage />
         </div>
         <div className="register-form__heading">
@@ -34,7 +35,13 @@ const SignUpPage = (): JSX.Element => {
               placeholder={t("signUpPage.enterFullname")}
               register={register("fullname")}
             />
-            <span className="input-error">{errors.fullname?.message}</span>
+            <ErrorMessage
+              errors={errors}
+              name="fullname"
+              render={({ message }) => (
+                <span className="input-error">{t(`${message}`)}</span>
+              )}
+            />
           </div>
           <div className="single-input-fields">
             <label>{t("email")}</label>
@@ -43,7 +50,13 @@ const SignUpPage = (): JSX.Element => {
               placeholder={t("enterEmail")}
               register={register("email")}
             />
-            <span className="input-error">{errors.email?.message}</span>
+            <ErrorMessage
+              errors={errors}
+              name="email"
+              render={({ message }) => (
+                <span className="input-error">{t(`${message}`)}</span>
+              )}
+            />
           </div>
           <div className="single-input-fields">
             <label>{t("password")}</label>
@@ -52,7 +65,13 @@ const SignUpPage = (): JSX.Element => {
               placeholder={t("enterPassword")}
               register={register("password")}
             />
-            <span className="input-error">{errors.password?.message}</span>
+            <ErrorMessage
+              errors={errors}
+              name="password"
+              render={({ message }) => (
+                <span className="input-error">{t(`${message}`)}</span>
+              )}
+            />
           </div>
           <div className="single-input-fields">
             <label>{t("signUpPage.confirmation")}</label>
@@ -61,7 +80,13 @@ const SignUpPage = (): JSX.Element => {
               placeholder={t("signUpPage.enterConfirmation")}
               register={register("confirmation")}
             />
-            <span className="input-error">{errors.confirmation?.message}</span>
+            <ErrorMessage
+              errors={errors}
+              name="confirmation"
+              render={({ message }) => (
+                <span className="input-error">{t(`${message}`)}</span>
+              )}
+            />
           </div>
         </div>
         <div className="register-form__footer">

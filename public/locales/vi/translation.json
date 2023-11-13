@@ -22,6 +22,7 @@
     "requiredConfirmation": "Xác nhận bắt buộc",
     "notValidEmail": "Email không đúng định dạng",
     "passwordsMustMatch": "Mật khẩu phải khớp nhau",
-    "strongerPassword": "Tạo mật khẩu mạnh hơn"
+    "strongerPassword": "Tạo mật khẩu mạnh hơn",
+    "passwordMustContain6Chars": "Mật khẩu phải gồm 6 kí tự"
   }
 }

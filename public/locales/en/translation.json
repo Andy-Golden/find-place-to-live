@@ -22,6 +22,7 @@
     "requiredConfirmation": "Confirmation is required",
     "notValidEmail": "Not valid email",
     "passwordsMustMatch": "Passwords must match",
-    "strongerPassword": "Create a stronger password"
+    "strongerPassword": "Create a stronger password",
+    "passwordMustContain6Chars": "Password must contain 6 characters"
   }
 }
