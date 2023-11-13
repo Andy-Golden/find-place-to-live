@@ -3,14 +3,20 @@
   --bg-red-1: #ff0000;
   --bg-green-1: #008000;
   --bg-gray-1: #d3d3d3;
+  --bg-gray-2: #c9c9c9;
   --bg-black-1: #64646f33;
   --bg-blue-1: #0046d5;
+  --bg-blue-2: #004274;
+  --bg-blue-3: #00aeff;
 
   --text-white-1: #fff;
   --text-red-1: #ff0000;
   --text-green-1: #008000;
+  --text-black-1: #545454;
+  --text-black-2: #140c40;
 
   --font-size-1: 1.5rem;
+  --font-size-2: 1rem;
 }
 
 body {
@@ -25,4 +31,15 @@ body {
 .container {
   padding: 0;
   margin: 0;
+}
+
+.auth-container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-blue-2);
 }
