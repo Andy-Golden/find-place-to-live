@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { Button, TextInput } from "@components";
+
 import { useSignUpPrepareHook } from "./helper";
 
 import "./styles.scss";
@@ -18,37 +20,37 @@ const SignUpPage = (): JSX.Element => {
         <div className="input-boxes">
           <div className="single-input-fields">
             <label>Full Name</label>
-            <input
-              className="input"
+            <TextInput
+              type="text"
               placeholder="Enter full name"
-              {...register("fullname")}
+              register={register("fullname")}
             />
             <span className="input-error">{errors.fullname?.message}</span>
           </div>
           <div className="single-input-fields">
             <label>Email</label>
-            <input
-              className="input"
+            <TextInput
+              type="text"
               placeholder="Enter email address"
-              {...register("email")}
+              register={register("email")}
             />
             <span className="input-error">{errors.email?.message}</span>
           </div>
           <div className="single-input-fields">
             <label>Password</label>
-            <input
-              className="input"
+            <TextInput
+              type="text"
               placeholder="Enter password"
-              {...register("password")}
+              register={register("password")}
             />
             <span className="input-error">{errors.password?.message}</span>
           </div>
           <div className="single-input-fields">
             <label>Confirm password</label>
-            <input
-              className="input"
+            <TextInput
+              type="text"
               placeholder="Confirm password"
-              {...register("confirmation")}
+              register={register("confirmation")}
             />
             <span className="input-error">{errors.confirmation?.message}</span>
           </div>
@@ -57,9 +59,7 @@ const SignUpPage = (): JSX.Element => {
           <p>
             Already have an account? <Link to="/login">login</Link> here
           </p>
-          <button className="button" type="submit">
-            Sign Up
-          </button>
+          <Button type="submit">Sign Up</Button>
         </div>
       </form>
     </div>
