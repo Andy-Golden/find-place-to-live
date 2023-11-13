@@ -7,6 +7,7 @@
   padding: 32px 60px 50px 50px;
   background: var(--bg-white-1);
   min-width: 700px;
+  border: 1px solid;
 
   @include tablet {
     min-width: 500px;
@@ -82,8 +83,6 @@
 
 .lang-layout {
   width: 100%;
-  display: flex;
-  justify-content: flex-end;
 
   .select-menu {
     margin-right: 10px;
