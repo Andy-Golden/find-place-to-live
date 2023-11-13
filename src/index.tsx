@@ -19,13 +19,15 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <Sentry.ErrorBoundary fallback={<ErrorFallbackCard />}>
-    <ToastProvider>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </ToastProvider>
-  </Sentry.ErrorBoundary>,
+  <React.StrictMode>
+    <Sentry.ErrorBoundary fallback={<ErrorFallbackCard />}>
+      <ToastProvider>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </ToastProvider>
+    </Sentry.ErrorBoundary>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

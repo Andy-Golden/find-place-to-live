@@ -2,14 +2,14 @@ import React from "react";
 
 import { Toast } from "@components";
 
-import { useToastProvidePrepareHook } from "./helper";
+import { useToastProviderPrepareHook } from "./helper";
 import type { IToastProviderProps } from "./interfaces";
 import { ToastContext } from "./ToastContext";
 
 import "./styles.scss";
 
 const ToastProvider = ({ children }: IToastProviderProps): JSX.Element => {
-  const { toasts, contextValue, onCloseToast } = useToastProvidePrepareHook();
+  const { toasts, contextValue, onCloseToast } = useToastProviderPrepareHook();
   return (
     <ToastContext.Provider value={contextValue}>
       {children}{" "}

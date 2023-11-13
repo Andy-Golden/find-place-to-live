@@ -1,6 +1,6 @@
-import type { ToastStatusType } from "@enums";
+import type { ToastStatus } from "@enums";
 
 export interface IToastContextValue {
-  open: (message: string, status: ToastStatusType) => void;
+  open: (message: string, status: ToastStatus) => void;
   close: (id: number) => void;
 }

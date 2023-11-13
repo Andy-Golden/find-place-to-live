@@ -1,7 +1,7 @@
-import type { ToastStatusType } from "@enums";
+import type { ToastStatus } from "@enums";
 
 export interface IToast {
   id: number;
-  status: ToastStatusType;
+  status: ToastStatus;
   message: string;
 }
