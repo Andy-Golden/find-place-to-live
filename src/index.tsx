@@ -17,16 +17,17 @@ import "./index.scss";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
+
+/* <React.StrictMode></React.StrictMode>, */
+
 root.render(
-  <React.StrictMode>
-    <Sentry.ErrorBoundary fallback={<ErrorFallbackCard />}>
-      <ToastProvider>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </ToastProvider>
-    </Sentry.ErrorBoundary>
-  </React.StrictMode>,
+  <Sentry.ErrorBoundary fallback={<ErrorFallbackCard />}>
+    <ToastProvider>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ToastProvider>
+  </Sentry.ErrorBoundary>,
 );
 
 // If you want to start measuring performance in your app, pass a function
