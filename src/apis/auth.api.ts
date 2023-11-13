@@ -27,7 +27,6 @@ const signUp = async (userSignUpRequest: ISignUpRequest): Promise<IUser> => {
     };
 
     const data = await addDoc(userCollectionRef, user);
-    console.log("🚀 ~ file: auth.api.ts:27 ~ data:", data);
 
     return {
       id: data.id,

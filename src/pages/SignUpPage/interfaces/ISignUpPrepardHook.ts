@@ -9,7 +9,8 @@ import type { TFunction } from "i18next";
 export interface ISignUpPrepareHook {
   t: TFunction<"Translation", undefined>;
   errors: FieldErrors<ISignUpRequest>;
-  onSubmit: (data: ISignUpRequest) => void;
+  isLoading: boolean;
+  onSubmit: (data: ISignUpRequest) => Promise<void>;
   register: UseFormRegister<ISignUpRequest>;
   handleSubmit: UseFormHandleSubmit<ISignUpRequest, undefined>;
 }
