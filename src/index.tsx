@@ -18,8 +18,6 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
 
-/* <React.StrictMode></React.StrictMode>, */
-
 root.render(
   <Sentry.ErrorBoundary fallback={<ErrorFallbackCard />}>
     <ToastProvider>
