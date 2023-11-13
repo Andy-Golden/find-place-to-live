@@ -10,6 +10,7 @@ import { ToastProvider } from "@providers";
 import { store } from "@store";
 
 import "./sentry";
+import "./i18n";
 
 import reportWebVitals from "./reportWebVitals";
 

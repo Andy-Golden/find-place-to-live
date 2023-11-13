@@ -79,3 +79,13 @@
     }
   }
 }
+
+.lang-layout {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  .select-menu {
+    margin-right: 10px;
+  }
+}

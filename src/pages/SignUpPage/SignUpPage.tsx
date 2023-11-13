@@ -1,16 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { Button, TextInput } from "@components";
+import { Button, SelectMenu, TextInput } from "@components";
 
 import { useSignUpPrepareHook } from "./helper";
 
 import "./styles.scss";
 
+const options = [
+  { key: "en", label: "en" },
+  { key: "vi", label: "vi" },
+];
+
 const SignUpPage = (): JSX.Element => {
   const { register, handleSubmit, onSubmit, errors } = useSignUpPrepareHook();
   return (
     <div className="auth-container">
+      <div className="lang-layout">
+        <SelectMenu options={options} />
+      </div>
       {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
       <form className="register-form" onSubmit={handleSubmit(onSubmit)}>
         <div className="register-form__heading">
