@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import type { IUser } from "@interfaces";
+import * as Sentry from "@sentry/react";
 
 import { getUsers } from "@apis";
+import { ToastStatus } from "@enums";
+import { ToastContext } from "@providers";
 
 import type { IAppPrepareHook } from "./interfaces";
 
 const useAppPrepareHook = (): IAppPrepareHook => {
   const [users, setUsers] = useState<IUser[]>([]);
+  const toast = useContext(ToastContext);
 
   useEffect(() => {
     void getUserList();
@@ -17,8 +21,9 @@ const useAppPrepareHook = (): IAppPrepareHook => {
       const data = await getUsers();
       setUsers(data);
     } catch (error) {
-      // TODO: this error will be handled in another branch
-      console.log("🚀 ~ file: helper.ts:21 ~ getUserList ~ error:", error);
+      const err = error as Error;
+      toast.open(err.message, ToastStatus.ERROR);
+      Sentry.captureException(error);
     }
   };
 

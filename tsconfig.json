@@ -19,13 +19,17 @@
     "paths": {
       "@/*": ["./src/*"],
       "@components": ["./components/index"],
+      "@constants": ["./constants/index"],
       "@pages": ["./pages/index"],
       "@layouts": ["./layouts/index"],
       "@store": ["./store/index"],
       "@apis": ["./apis/index"],
       "@utils": ["./utils/index"],
       "@server": ["./server/index"],
-      "@interfaces": ["./interfaces/index"]
+      "@interfaces": ["./interfaces/index"],
+      "@assets": ["./assets/index"],
+      "@enums": ["./enums/index"],
+      "@providers": ["./providers/index"]
     }
   },
   "include": ["src"]

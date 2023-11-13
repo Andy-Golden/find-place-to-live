@@ -2,9 +2,9 @@ import React from "react";
 
 import { useAppPrepareHook } from "./helper";
 
-import "./App.css";
+import "./App.scss";
 
-function App(): JSX.Element {
+const App = (): JSX.Element => {
   const { users } = useAppPrepareHook();
 
   return (
@@ -18,6 +18,6 @@ function App(): JSX.Element {
       ))}
     </div>
   );
-}
+};
 
 export default App;

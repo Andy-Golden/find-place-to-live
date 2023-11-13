@@ -37,12 +37,16 @@ $ yarn start
   └──images/
 └──src/
   ├──apis/ # Using to store api call from firebase
+  ├──assets/ # Using to store stylesheets
   ├──components/ # Using to component used in many pages
+  ├──constants/ # Using to constants used in many pages
+  ├──enums/ # Using to enums used in many pages
   ├──interfaces/  # Using to store interfaces used in many file
+  ├──pages/  # Using to store pages components
+  ├──providers/  # Using to store providers and contexts
   ├──layouts/ # Store layouts used in many pages
   ├──server/ # Store Firebase config
   ├──store/ # Store reducer, slice from redux
-  ├──Utils/ # Store logic function used in many pages
   │
   └── index.tsx
 ```

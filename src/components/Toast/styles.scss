@@ -1,0 +1,62 @@
+.toast {
+  position: relative;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid var(--bg-gray-1);
+  border-radius: 5px;
+  max-width: 220px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1000;
+  background-color: var(--bg-white-1);
+
+  .toast-content {
+    flex: 1;
+  }
+
+  .btn-close-toast {
+    outline: none;
+    border: none;
+  }
+
+  &::before {
+    content: "";
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: progress linear forwards 3s;
+  }
+
+  .error {
+    .fas {
+      color: var(--text-red-1);
+    }
+  }
+
+  .success {
+    .fas {
+      color: var(--text-green-1);
+    }
+  }
+
+  &--show {
+    display: flex;
+  }
+}
+
+.progress-error::before {
+  background-color: var(--bg-red-1);
+}
+
+.progress-success::before {
+  background-color: var(--bg-green-1);
+}
+
+@keyframes progress {
+  100% {
+    width: 0%;
+  }
+}
