@@ -7,7 +7,7 @@ import type { ISignUpRequest } from "@interfaces";
 
 export interface ISignUpPrepareHook {
   errors: FieldErrors<ISignUpRequest>;
-  onSubmit: (data: ISignUpPrepareHook) => void;
+  onSubmit: (data: ISignUpRequest) => void;
   register: UseFormRegister<ISignUpRequest>;
   handleSubmit: UseFormHandleSubmit<ISignUpRequest, undefined>;
 }

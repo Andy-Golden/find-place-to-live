@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^7.1.0",
+    "@hookform/resolvers": "^3.3.2",
     "@reduxjs/toolkit": "^1.9.7",
     "@sentry/react": "^7.80.0",
     "@testing-library/jest-dom": "^5.17.0",
