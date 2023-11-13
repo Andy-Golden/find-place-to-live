@@ -12,12 +12,12 @@ const SignUpPage = (): JSX.Element => {
   return (
     <div className="auth-container">
       {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
-      <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        <div className="heading">
+      <form className="register-form" onSubmit={handleSubmit(onSubmit)}>
+        <div className="register-form__heading">
           <h1 className="title">Sign Up</h1>
           <p className="subtitle">Create your account to get full access</p>
         </div>
-        <div className="input-boxes">
+        <div className="register-form__input-boxes">
           <div className="single-input-fields">
             <label>Full Name</label>
             <TextInput
@@ -55,7 +55,7 @@ const SignUpPage = (): JSX.Element => {
             <span className="input-error">{errors.confirmation?.message}</span>
           </div>
         </div>
-        <div className="footer">
+        <div className="register-form__footer">
           <p>
             Already have an account? <Link to="/login">login</Link> here
           </p>
