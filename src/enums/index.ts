@@ -1,1 +1,1 @@
-export { ToastStatus, type ToastStatusType } from "./toastStatus";
+export { ToastStatus } from "./toastStatus";

@@ -13,15 +13,15 @@ const getUsers = async (): Promise<IUser[]> => {
     const data = await getDocs(userCollectionRef);
 
     const users: IUser[] = data.docs.map((doc) => {
-      const data = doc.data();
+      const { fullname, email, role, avatar, status } = doc.data();
 
       const user: IUser = {
         id: doc.id,
-        fullname: data.fullname,
-        email: data.email,
-        role: data.role,
-        avatar: data.avatar,
-        status: data.status,
+        fullname,
+        email,
+        role,
+        avatar,
+        status,
       };
       return user;
     });
