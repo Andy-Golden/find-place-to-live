@@ -8,10 +8,10 @@ import { Select } from "./Select";
 import "./styles.scss";
 
 const SelectMenu = ({
+  options,
+  defaultValue,
   className,
   textColor,
-  defaultValue,
-  options,
   background,
   onChange,
 }: SelectMenuProps): JSX.Element => {
