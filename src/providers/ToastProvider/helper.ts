@@ -13,6 +13,11 @@ const useToastProviderPrepareHook = (): IToastProviderPrepareHook => {
       status,
     };
     setToasts((prev) => [...prev, newToast]);
+
+    setTimeout(() => {
+      const newToastList = toasts.filter((toast) => toast.id !== newToast.id);
+      setToasts(newToastList);
+    }, 3000);
   };
   const closeToast = (id: number): void => {
     const newToastList = toasts.filter((toast) => toast.id !== id);

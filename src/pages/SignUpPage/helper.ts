@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router";
 import { yupResolver } from "@hookform/resolvers/yup";
 import type { ISignUpRequest } from "@interfaces";
 
@@ -12,6 +13,7 @@ import schema from "./validation";
 
 const useSignUpPrepareHook = (): ISignUpPrepareHook => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const toast = useContext(ToastContext);
   const {
     register,
@@ -20,7 +22,8 @@ const useSignUpPrepareHook = (): ISignUpPrepareHook => {
   } = useForm<ISignUpRequest>({ resolver: yupResolver(schema) });
 
   const onSubmit = (data: ISignUpRequest): void => {
-    toast.open("", ToastStatus.SUCCESS);
+    toast.open("Signup success", ToastStatus.SUCCESS);
+    navigate("/");
   };
 
   return {
