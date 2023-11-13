@@ -15,7 +15,7 @@ const Button = ({
   return (
     <button
       type={type}
-      className={`button ${className}`}
+      className={`button ${className ?? ""}`}
       style={{ background, color: textColor }}
       onClick={onClick}
     >

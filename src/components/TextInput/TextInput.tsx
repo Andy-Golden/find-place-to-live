@@ -15,7 +15,7 @@ const TextInput = ({
 }: ITextInputProps): JSX.Element => {
   return (
     <input
-      className={`input ${className}`}
+      className={`input ${className ?? ""}`}
       value={value}
       type={type}
       style={{ background, color: textColor }}

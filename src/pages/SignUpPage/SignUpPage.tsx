@@ -1,63 +1,64 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { Button, SelectMenu, TextInput } from "@components";
+import { SelectLanguage } from "@common";
+import { Button, TextInput } from "@components";
 
 import { useSignUpPrepareHook } from "./helper";
 
 import "./styles.scss";
 
-const options = [
-  { key: "en", label: "en" },
-  { key: "vi", label: "vi" },
-];
-
 const SignUpPage = (): JSX.Element => {
-  const { register, handleSubmit, onSubmit, errors } = useSignUpPrepareHook();
+  const { t, register, handleSubmit, onSubmit, errors } =
+    useSignUpPrepareHook();
   return (
     <div className="auth-container">
-      <div className="lang-layout">
-        <SelectMenu options={options} />
-      </div>
-      {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
-      <form className="register-form" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        autoComplete="off"
+        className="register-form"
+        // eslint-disable-next-line @typescript-eslint/no-misused-promises
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <div className="lang-layout">
+          <SelectLanguage />
+        </div>
         <div className="register-form__heading">
-          <h1 className="title">Sign Up</h1>
-          <p className="subtitle">Create your account to get full access</p>
+          <h1 className="title">{t("signUp")}</h1>
+          <p className="subtitle">{t("signUpPage.subTitle")}</p>
         </div>
         <div className="register-form__input-boxes">
           <div className="single-input-fields">
-            <label>Full Name</label>
+            <label>{t("signUpPage.fullname")}</label>
             <TextInput
               type="text"
-              placeholder="Enter full name"
+              placeholder={t("signUpPage.enterFullname")}
               register={register("fullname")}
             />
             <span className="input-error">{errors.fullname?.message}</span>
           </div>
           <div className="single-input-fields">
-            <label>Email</label>
+            <label>{t("email")}</label>
             <TextInput
               type="text"
-              placeholder="Enter email address"
+              placeholder={t("enterEmail")}
               register={register("email")}
             />
             <span className="input-error">{errors.email?.message}</span>
           </div>
           <div className="single-input-fields">
-            <label>Password</label>
+            <label>{t("password")}</label>
             <TextInput
               type="text"
-              placeholder="Enter password"
+              placeholder={t("enterPassword")}
               register={register("password")}
             />
             <span className="input-error">{errors.password?.message}</span>
           </div>
           <div className="single-input-fields">
-            <label>Confirm password</label>
+            <label>{t("signUpPage.confirmation")}</label>
             <TextInput
               type="text"
-              placeholder="Confirm password"
+              placeholder={t("signUpPage.enterConfirmation")}
               register={register("confirmation")}
             />
             <span className="input-error">{errors.confirmation?.message}</span>
@@ -65,9 +66,10 @@ const SignUpPage = (): JSX.Element => {
         </div>
         <div className="register-form__footer">
           <p>
-            Already have an account? <Link to="/login">login</Link> here
+            {t("signUpPage.alreadyHaveAccount")}
+            <Link to="/login">{t("signIn")}</Link> {t("signUpPage.here")}
           </p>
-          <Button type="submit">Sign Up</Button>
+          <Button type="submit">{t("signUp")}</Button>
         </div>
       </form>
     </div>

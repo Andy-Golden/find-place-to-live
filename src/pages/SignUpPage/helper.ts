@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { yupResolver } from "@hookform/resolvers/yup";
 import type { ISignUpRequest } from "@interfaces";
 
@@ -6,6 +7,7 @@ import type { ISignUpPrepareHook } from "./interfaces";
 import schema from "./validation";
 
 const useSignUpPrepareHook = (): ISignUpPrepareHook => {
+  const { t } = useTranslation();
   const {
     register,
     handleSubmit,
@@ -15,6 +17,7 @@ const useSignUpPrepareHook = (): ISignUpPrepareHook => {
   const onSubmit = (data: ISignUpRequest): void => {};
 
   return {
+    t,
     errors,
     register,
     onSubmit,

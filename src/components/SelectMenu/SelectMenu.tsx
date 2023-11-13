@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import type { SelectMenuProps } from "./interfaces";
 import { MenuItem } from "./MenuItem";
@@ -14,15 +15,16 @@ const SelectMenu = ({
   background,
   onChange,
 }: SelectMenuProps): JSX.Element => {
+  const { t } = useTranslation();
   return (
     <div
-      className={`select-menu ${className}`}
+      className={`select-menu ${className ?? ""}`}
       style={{ background, color: textColor }}
     >
       <Select onChange={onChange} value={defaultValue}>
         {options.map((item) => (
           <MenuItem key={item.key} value={item.key}>
-            {item.label}
+            {t(`${item.label}`)}
           </MenuItem>
         ))}
       </Select>
