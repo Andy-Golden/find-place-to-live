@@ -1,2 +1,2 @@
-export { App } from "./app";
+export { HomePage } from "./HomePage";
 export { SignUpPage } from "./SignUpPage";

@@ -1,4 +1,4 @@
-import type { IUser, IUserSignUpRequest } from "@interfaces";
+import type { ISignUpRequest, IUser } from "@interfaces";
 import type { FirebaseError } from "firebase/app";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { addDoc, collection } from "firebase/firestore";
@@ -10,9 +10,7 @@ import { Collections } from "./collections";
 
 const userCollectionRef = collection(db, Collections.USER);
 
-const signUp = async (
-  userSignUpRequest: IUserSignUpRequest,
-): Promise<IUser> => {
+const signUp = async (userSignUpRequest: ISignUpRequest): Promise<IUser> => {
   try {
     const userCredential = await createUserWithEmailAndPassword(
       auth,

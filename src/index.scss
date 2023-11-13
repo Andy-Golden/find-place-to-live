@@ -1,23 +1,69 @@
+@import "@assets/stylesheets/mixins.scss";
+
 :root {
   --bg-white-1: #fff;
   --bg-red-1: #ff0000;
   --bg-green-1: #008000;
   --bg-gray-1: #d3d3d3;
+  --bg-gray-2: #c9c9c9;
   --bg-black-1: #64646f33;
+  --bg-black-2: #313131;
   --bg-blue-1: #0046d5;
+  --bg-blue-2: #004274;
+  --bg-blue-3: #00aeff;
 
   --text-white-1: #fff;
   --text-red-1: #ff0000;
   --text-green-1: #008000;
+  --text-black-1: #545454;
+  --text-black-2: #140c40;
 
   --font-size-1: 1.5rem;
+  --font-size-2: 1rem;
 }
 
 body {
   margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #root {
-  width: 100vw;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+}
+
+.auth-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   height: 100vh;
+  background: var(--bg-blue-2);
+
+  @include mobile {
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+.lang-form-layout {
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: flex-end;
+
+  .select-menu {
+    margin-right: 10px;
+    width: 90px;
+  }
 }
