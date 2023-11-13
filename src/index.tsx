@@ -5,6 +5,7 @@ import * as Sentry from "@sentry/react";
 
 import { ErrorFallbackCard } from "@components";
 import { App } from "@pages";
+import { ToastProvider } from "@providers";
 import { store } from "@store";
 
 import "./sentry";
@@ -20,9 +21,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Sentry.ErrorBoundary fallback={<ErrorFallbackCard />}>
-      <Provider store={store}>
-        <App />
-      </Provider>
+      <ToastProvider>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </ToastProvider>
     </Sentry.ErrorBoundary>
   </React.StrictMode>,
 );
