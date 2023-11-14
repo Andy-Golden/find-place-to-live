@@ -1,3 +1,4 @@
+import path from "path";
 import type { StorybookConfig } from "@storybook/react-webpack5";
 
 const config: StorybookConfig = {
@@ -15,6 +16,19 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: "tag",
+  },
+  webpackFinal(config, { configType }) {
+    console.log("config: ", config);
+    return {
+      ...config,
+      resolve: {
+        ...config.resolve,
+        alias: {
+          ...config?.resolve?.alias,
+          "@enums": path.resolve(__dirname, "../src/enums"),
+        },
+      },
+    };
   },
   staticDirs: ["../public"],
 };

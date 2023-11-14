@@ -6,9 +6,18 @@ import type { IToastProps } from "./interfaces";
 
 import "./styles.scss";
 
-const Toast = ({ type, message, onHideToast }: IToastProps): JSX.Element => {
+const Toast = ({
+  type,
+  message,
+  background,
+  textColor,
+  onHideToast,
+}: IToastProps): JSX.Element => {
   return (
-    <div className={`toast toast--show progress-${type}`}>
+    <div
+      className={`toast toast--show progress-${type}`}
+      style={{ background, color: textColor }}
+    >
       {type === ToastStatus.SUCCESS && (
         <span className="success">
           <i className="fas fa-check-circle"></i>
