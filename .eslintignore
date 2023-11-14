@@ -4,3 +4,5 @@ src/setupTests.ts
 src/react-app-env.d.ts
 src/reportWebVitals.ts
 craco.config.js
+webpack.config.ts
+jest.config.js

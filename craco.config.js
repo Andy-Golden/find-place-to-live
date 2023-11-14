@@ -18,4 +18,9 @@ module.exports = {
       "@common": path.resolve(__dirname, "src/common"),
     },
   },
+  jest: {
+    moduleNameMapper: {
+      "@components/(.+)": "<rootDir>/src/@core/components/$1",
+    },
+  },
 };
