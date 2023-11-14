@@ -15,6 +15,11 @@
     "alreadyHaveAccount": "Already have account?",
     "here": "here"
   },
+  "signInPage": {
+    "subTitle": "Enter Login details to get access",
+    "dontHaveAccount": "Don't have account?",
+    "here": "here"
+  },
   "error": {
     "requiredFullname": "Fullname is required",
     "requiredEmail": "Email is required",
@@ -26,6 +31,7 @@
     "passwordMustContain6Chars": "Password must contain 6 characters"
   },
   "message": {
-    "successSignUp": "Signup successfully"
+    "successSignUp": "Sign up successfully",
+    "successSignIn": "Sign in successfully"
   }
 }

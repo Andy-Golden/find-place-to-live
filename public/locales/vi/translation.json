@@ -15,6 +15,11 @@
     "alreadyHaveAccount": "Đã có tài khoản?",
     "here": "ở đây"
   },
+  "signInPage": {
+    "subTitle": "Đăng nhập vào để sử dụng nhiều tính năng",
+    "dontHaveAccount": "Chưa có tài khoản?",
+    "here": "ở đây"
+  },
   "error": {
     "requiredFullname": "Họ và tên bắt buộc",
     "requiredEmail": "Email băt buộc",
@@ -26,6 +31,7 @@
     "passwordMustContain6Chars": "Mật khẩu phải gồm 6 kí tự"
   },
   "message": {
-    "successSignUp": "Đăng ký thành công"
+    "successSignUp": "Đăng ký thành công",
+    "successSignIn": "Đăng nhập thành công"
   }
 }

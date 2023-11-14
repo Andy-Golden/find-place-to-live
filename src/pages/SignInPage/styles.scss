@@ -1,0 +1,104 @@
+@import "@assets/stylesheets/mixins.scss";
+
+.login-form {
+  padding: 10px;
+  margin: auto;
+  box-shadow: var(--bg-black-1) 0px 7px 29px 0px;
+  width: 30%;
+  padding: 11px 25px 30px 29px;
+  background: var(--bg-white-1);
+  min-width: 700px;
+  border: 1px solid;
+  border-radius: 10px;
+  min-width: 450px;
+
+  @include mobile {
+    margin: unset;
+    margin-top: 10px;
+    min-width: 250px;
+  }
+
+  &__heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-black-2);
+
+    h1 {
+      @include mobile {
+        font-size: var(--font-size-1);
+      }
+    }
+
+    .subtitle {
+      margin: auto;
+      color: var(--text-black-1);
+      font-family: "Jost", sans-serif;
+
+      @include mobile {
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__input-boxes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    @include mobile {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      gap: 14px;
+    }
+
+    .single-input-fields {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      label {
+        display: block;
+        font-size: 1rem;
+        color: var(--text-black-2);
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+
+      .input {
+        @include mobile {
+          height: 43px;
+          padding: 0 10px;
+          font-size: 1rem;
+        }
+      }
+
+      .input-error {
+        color: var(--text-red-1);
+        margin-top: 3px;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    width: 100%;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    p {
+      flex: 1;
+
+      @include mobile {
+        text-align: center;
+      }
+    }
+  }
+}
