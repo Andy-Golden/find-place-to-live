@@ -28,7 +28,10 @@ const SignUpPage = (): JSX.Element => {
           </div>
           <div className="register-form__heading">
             <h1 className="title">{t("signUp")}</h1>
-            <p className="subtitle">{t("signUpPage.subTitle")}</p>
+            <p>
+              {t("signUpPage.alreadyHaveAccount")}
+              <Link to="/signIn">{t("signIn")}</Link> {t("signUpPage.here")}
+            </p>
           </div>
           <div className="register-form__input-boxes">
             <div className="single-input-fields">
@@ -93,10 +96,6 @@ const SignUpPage = (): JSX.Element => {
             </div>
           </div>
           <div className="register-form__footer">
-            <p>
-              {t("signUpPage.alreadyHaveAccount")}
-              <Link to="/signIn">{t("signIn")}</Link> {t("signUpPage.here")}
-            </p>
             <Button type="submit">{t("signUp")}</Button>
           </div>
         </form>

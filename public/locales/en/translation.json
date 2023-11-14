@@ -18,6 +18,9 @@
   "signInPage": {
     "subTitle": "Enter Login details to get access",
     "dontHaveAccount": "Don't have account?",
+    "googleLogin": "Google Login",
+    "or": "Or",
+    "forgotPassword": "Forgot password?",
     "here": "here"
   },
   "error": {

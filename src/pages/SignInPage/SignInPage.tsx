@@ -25,7 +25,10 @@ const SignInPage = (): JSX.Element => {
         </div>
         <div className="login-form__heading">
           <h1 className="title">{t("signIn")}</h1>
-          <p className="subtitle">{t("signInPage.subTitle")}</p>
+          <p>
+            {t("signInPage.dontHaveAccount")}
+            <Link to="/signUp">{t("signUp")}</Link> {t("signInPage.here")}
+          </p>
         </div>
         <div className="login-form__input-boxes">
           <div className="single-input-fields">
@@ -58,13 +61,16 @@ const SignInPage = (): JSX.Element => {
               )}
             />
           </div>
+          <span>
+            <Link to="/reset-password">{t("signInPage.forgotPassword")}</Link>
+          </span>
         </div>
         <div className="login-form__footer">
-          <p>
-            {t("signInPage.dontHaveAccount")}
-            <Link to="/signUp">{t("signUp")}</Link> {t("signInPage.here")}
-          </p>
           <Button type="submit">{t("signIn")}</Button>
+          <p>{t("signInPage.or")}</p>
+          <Button className="btn-google" type="button">
+            {t("signInPage.googleLogin")}
+          </Button>
         </div>
       </form>
     </div>

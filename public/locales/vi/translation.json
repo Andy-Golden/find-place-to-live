@@ -18,6 +18,9 @@
   "signInPage": {
     "subTitle": "Đăng nhập vào để sử dụng nhiều tính năng",
     "dontHaveAccount": "Chưa có tài khoản?",
+    "googleLogin": "Đăng nhập với google",
+    "or": "Hoặc",
+    "forgotPassword": "Quên mật khẩu",
     "here": "ở đây"
   },
   "error": {
