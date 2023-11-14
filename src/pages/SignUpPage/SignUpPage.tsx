@@ -39,7 +39,7 @@ const SignUpPage = (): JSX.Element => {
           <div className="single-input-fields">
             <label>Password</label>
             <TextInput
-              type="text"
+              type="password"
               placeholder="Enter password"
               register={register("password")}
             />
@@ -48,7 +48,7 @@ const SignUpPage = (): JSX.Element => {
           <div className="single-input-fields">
             <label>Confirm password</label>
             <TextInput
-              type="text"
+              type="password"
               placeholder="Confirm password"
               register={register("confirmation")}
             />
