@@ -20,12 +20,20 @@ module.exports = {
   },
   jest: {
     moduleNameMapper: {
-      "@src/(.+)": "<rootDir>/src/$1",
+      "@/(.+)": "<rootDir>/src/$1",
       "@assets/(.+)": "<rootDir>/src/assets/$1",
       "@common/(.+)": "<rootDir>/src/common/$1",
       "@components/(.+)": "<rootDir>/src/components/$1",
+      "@constants/(.+)": "<rootDir>/src/constants/$1",
       "@layouts/(.+)": "<rootDir>/src/layouts/$1",
       "@store/(.+)": "<rootDir>/src/store/$1",
+      "@enums/(.+)": "<rootDir>/src/enums/$1",
+      "@pages/(.+)": "<rootDir>/src/pages/$1",
+      "@utils/(.+)": "<rootDir>/src/utils/$1",
+      "@providers/(.+)": "<rootDir>/src/providers/$1",
+      "@interfaces/(.+)": "<rootDir>/src/interfaces/$1",
+      "@server/(.+)": "<rootDir>/src/server/$1",
+      "@apis/(.+)": "<rootDir>/src/apis/$1",
     },
   },
 };
