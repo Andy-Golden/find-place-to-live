@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { yupResolver } from "@hookform/resolvers/yup";
 import type { ISignUpRequest } from "@interfaces";
+import * as Sentry from "@sentry/react";
 
 import { signUp } from "@apis";
 import { ToastStatus } from "@enums";
@@ -26,12 +27,18 @@ const useSignUpPrepareHook = (): ISignUpPrepareHook => {
   } = useForm<ISignUpRequest>({ resolver: yupResolver(schema) });
 
   const onSubmit = async (data: ISignUpRequest): Promise<void> => {
-    setIsLoading(true);
-    await signUp(data);
-    setIsLoading(false);
+    try {
+      setIsLoading(true);
+      await signUp(data);
+      setIsLoading(false);
 
-    toast.open(t(`message.successSignUp`), ToastStatus.SUCCESS);
-    navigate("/");
+      toast.open(t(`message.successSignUp`), ToastStatus.SUCCESS);
+      navigate("/");
+    } catch (error) {
+      const err = error as Error;
+      toast.open(err.message, ToastStatus.ERROR);
+      Sentry.captureException(err);
+    }
   };
 
   return {
