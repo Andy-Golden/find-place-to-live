@@ -61,7 +61,7 @@ const SignUpPage = (): JSX.Element => {
           <div className="single-input-fields">
             <label>{t("password")}</label>
             <TextInput
-              type="text"
+              type="password"
               placeholder={t("enterPassword")}
               register={register("password")}
             />
@@ -76,7 +76,7 @@ const SignUpPage = (): JSX.Element => {
           <div className="single-input-fields">
             <label>{t("signUpPage.confirmation")}</label>
             <TextInput
-              type="text"
+              type="password"
               placeholder={t("signUpPage.enterConfirmation")}
               register={register("confirmation")}
             />
