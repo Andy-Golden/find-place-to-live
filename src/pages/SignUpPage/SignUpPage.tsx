@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ErrorMessage } from "@hookform/error-message";
 
-// import { SelectLanguage } from "@common";
+import { SelectLanguage } from "@common";
 import { Button, Loading, TextInput } from "@components";
 
 import { useSignUpPrepareHook } from "./helper";
@@ -23,7 +23,9 @@ const SignUpPage = (): JSX.Element => {
           // eslint-disable-next-line @typescript-eslint/no-misused-promises
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="lang-form-layout">{/* <SelectLanguage /> */}</div>
+          <div className="lang-form-layout">
+            <SelectLanguage />
+          </div>
           <div className="register-form__heading">
             <h1 className="title">{t("signUp")}</h1>
             <p className="subtitle">{t("signUpPage.subTitle")}</p>

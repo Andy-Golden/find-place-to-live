@@ -20,7 +20,12 @@ module.exports = {
   },
   jest: {
     moduleNameMapper: {
-      "@components/(.+)": "<rootDir>/src/@core/components/$1",
+      "@src/(.+)": "<rootDir>/src/$1",
+      "@assets/(.+)": "<rootDir>/src/assets/$1",
+      "@common/(.+)": "<rootDir>/src/common/$1",
+      "@components/(.+)": "<rootDir>/src/components/$1",
+      "@layouts/(.+)": "<rootDir>/src/layouts/$1",
+      "@store/(.+)": "<rootDir>/src/store/$1",
     },
   },
 };
