@@ -2,18 +2,20 @@
 
 .register-form {
   padding: 10px;
+  margin: auto;
   box-shadow: var(--bg-black-1) 0px 7px 29px 0px;
   width: 30%;
-  padding: 32px 60px 50px 50px;
+  padding: 11px 25px 30px 29px;
   background: var(--bg-white-1);
   min-width: 700px;
-
-  @include tablet {
-    min-width: 500px;
-  }
+  border: 1px solid;
+  border-radius: 10px;
+  min-width: 450px;
 
   @include mobile {
-    min-width: 200px;
+    margin: unset;
+    margin-top: 10px;
+    min-width: 250px;
   }
 
   &__heading {
@@ -23,6 +25,12 @@
     align-items: center;
     color: var(--text-black-2);
 
+    h1 {
+      @include mobile {
+        font-size: var(--font-size-1);
+      }
+    }
+
     .subtitle {
       margin: auto;
       color: var(--text-black-1);
@@ -30,6 +38,7 @@
 
       @include mobile {
         text-align: center;
+        font-size: 1rem;
       }
     }
   }
@@ -42,6 +51,12 @@
     padding-top: 35px;
     padding-bottom: 35px;
 
+    @include mobile {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      gap: 14px;
+    }
+
     .single-input-fields {
       display: flex;
       flex-direction: column;
@@ -49,10 +64,18 @@
 
       label {
         display: block;
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: var(--text-black-2);
         margin-bottom: 6px;
         font-weight: 600;
+      }
+
+      .input {
+        @include mobile {
+          height: 43px;
+          padding: 0 10px;
+          font-size: 1rem;
+        }
       }
 
       .input-error {

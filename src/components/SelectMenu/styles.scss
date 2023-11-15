@@ -1,0 +1,20 @@
+.select-menu {
+  background-color: var(--bg-white-1);
+  font-size: 1.05rem;
+  color: var(--text-black-1);
+  border-radius: 5px;
+  width: 200px;
+  border: 1px solid var(--bg-gray-2);
+
+  .select {
+    padding: 10px;
+    border: none;
+    outline: none;
+
+    appearance: none;
+    background-image: url("../../../public/images/down-arrow-2.png");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 0.65rem auto;
+  }
+}

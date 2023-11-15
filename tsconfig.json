@@ -29,7 +29,8 @@
       "@interfaces": ["./interfaces/index"],
       "@assets": ["./assets/index"],
       "@enums": ["./enums/index"],
-      "@providers": ["./providers/index"]
+      "@providers": ["./providers/index"],
+      "@common": ["./common/index"]
     }
   },
   "include": ["src"]
