@@ -1,4 +1,5 @@
+// Password has at least a lowercase and uppercase letter, a special character, a number, 6 chars or more
 const strongPassword =
-  /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{6}$/;
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\\$%\\^&\\*])(?=.{6,})/;
 
 export default strongPassword;
