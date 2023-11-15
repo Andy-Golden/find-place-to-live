@@ -24,5 +24,8 @@
     "passwordsMustMatch": "Mật khẩu phải khớp nhau",
     "strongerPassword": "Tạo mật khẩu mạnh hơn",
     "passwordMustContain6Chars": "Mật khẩu phải gồm 6 kí tự"
+  },
+  "message": {
+    "successSignUp": "Đăng ký thành công"
   }
 }

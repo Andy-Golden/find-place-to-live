@@ -24,5 +24,8 @@
     "passwordsMustMatch": "Passwords must match",
     "strongerPassword": "Create a stronger password",
     "passwordMustContain6Chars": "Password must contain 6 characters"
+  },
+  "message": {
+    "successSignUp": "Signup successfully"
   }
 }
