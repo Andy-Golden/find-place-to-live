@@ -6,6 +6,11 @@ import type { IToast, IToastProviderPrepareHook } from "./interfaces";
 const useToastProviderPrepareHook = (): IToastProviderPrepareHook => {
   const [toasts, setToasts] = useState<IToast[]>([]);
 
+  const closeToast = (id: number): void => {
+    const newToastList = toasts.filter((toast) => toast.id !== id);
+    setToasts(newToastList);
+  };
+
   const openToast = (message: string, status: ToastStatus): void => {
     const newToast = {
       id: Date.now(),
@@ -13,10 +18,10 @@ const useToastProviderPrepareHook = (): IToastProviderPrepareHook => {
       status,
     };
     setToasts((prev) => [...prev, newToast]);
-  };
-  const closeToast = (id: number): void => {
-    const newToastList = toasts.filter((toast) => toast.id !== id);
-    setToasts(newToastList);
+
+    setTimeout(() => {
+      closeToast(newToast.id);
+    }, 3000);
   };
 
   const contextValue = useMemo(

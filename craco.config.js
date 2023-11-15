@@ -15,6 +15,7 @@ module.exports = {
       "@assets": path.resolve(__dirname, "src/assets"),
       "@enums": path.resolve(__dirname, "src/enums"),
       "@providers": path.resolve(__dirname, "src/providers"),
+      "@common": path.resolve(__dirname, "src/common"),
     },
   },
 };
