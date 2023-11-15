@@ -1,7 +1,8 @@
 import React from "react";
 
 const HomePage = (): JSX.Element => {
-  return <div>Home</div>;
+  const a: any = undefined;
+  return <div>{a.email}</div>;
 };
 
 export default HomePage;
