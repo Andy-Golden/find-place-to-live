@@ -1,0 +1,31 @@
+{
+  "vi": "vi",
+  "email": "Địa chỉ email",
+  "password": "Mật khẩu",
+  "enterEmail": "Nhập địa chỉ email",
+  "enterPassword": "Nhâp mật khẩu",
+  "signUp": "Đăng ký",
+  "signIn": "Đăng nhập",
+  "signUpPage": {
+    "subTitle": "Tạo tài khoản của bạn để có được toàn quyền truy cập",
+    "fullname": "Họ và tên",
+    "confirmation": "Xác nhận mật khẩu",
+    "enterFullname": "Nhập họ tên",
+    "enterConfirmation": "Xác nhân mật khẩu",
+    "alreadyHaveAccount": "Đã có tài khoản?",
+    "here": "ở đây"
+  },
+  "error": {
+    "requiredFullname": "Họ và tên bắt buộc",
+    "requiredEmail": "Email băt buộc",
+    "requiredPassword": "Mật khẩu bắt buộc",
+    "requiredConfirmation": "Xác nhận bắt buộc",
+    "notValidEmail": "Email không đúng định dạng",
+    "passwordsMustMatch": "Mật khẩu phải khớp nhau",
+    "strongerPassword": "Tạo mật khẩu mạnh hơn",
+    "passwordMustContain6Chars": "Mật khẩu phải gồm 6 kí tự"
+  },
+  "message": {
+    "successSignUp": "Đăng ký thành công"
+  }
+}

@@ -4,3 +4,7 @@ src/setupTests.ts
 src/react-app-env.d.ts
 src/reportWebVitals.ts
 craco.config.js
+vite.config.ts
+jest.config.js
+babel.config.js
+src/vite-env.d.ts
