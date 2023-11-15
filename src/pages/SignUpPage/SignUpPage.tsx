@@ -91,7 +91,7 @@ const SignUpPage = (): JSX.Element => {
         </div>
         <div className="register-form__footer">
           <p>
-            {t("signUpPage.alreadyHaveAccount")}
+            {t("signUpPage.alreadyHaveAccount")}{" "}
             <Link to="/login">{t("signIn")}</Link> {t("signUpPage.here")}
           </p>
           <Button type="submit">{t("signUp")}</Button>
