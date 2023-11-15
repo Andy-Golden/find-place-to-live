@@ -8,7 +8,7 @@ import { Button } from "@components";
 import "./styles.scss";
 
 const NavbarLayout = (): JSX.Element => {
-  const [user] = useState(false);
+  const [user] = useState(true);
 
   return (
     <div className="container">
@@ -49,11 +49,19 @@ const NavbarLayout = (): JSX.Element => {
               <div className="btn-profile">
                 <i className="fas fa-user"></i>
                 <span>Profile</span>
-                <i className="fas fa-angle-down"></i>
-                <ul className="btn-profile__dropdown">
-                  <li className="dropdown-option">Message</li>
-                  <li className="dropdown-option">Info</li>
-                  <li className="dropdown-option">Sign out</li>
+                <button type="button" className="btn-show-dropdown">
+                  {" "}
+                  <i className="fas fa-angle-down"></i>
+                </button>
+                <ul className="dropdown dropdown--hide">
+                  <li className="dropdown-option">
+                    <i className="fas fa-info"></i>
+                    <span>Info</span>
+                  </li>
+                  <li className="dropdown-option">
+                    <i className="fas fa-sign-out-alt"></i>
+                    <span>Sign out</span>
+                  </li>
                 </ul>
               </div>
             )}
