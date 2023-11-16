@@ -90,6 +90,7 @@
     "@storybook/react-vite": "^7.5.3",
     "@storybook/react-webpack5": "^7.5.3",
     "@storybook/testing-library": "^0.2.2",
+    "@types/enzyme": "^3.10.16",
     "@types/react-test-renderer": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "babel-jest": "^29.7.0",
