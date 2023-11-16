@@ -30,4 +30,6 @@ module.exports = {
     "^.+\\.ts?$": "ts-jest",
   },
   transformIgnorePatterns: ["<rootDir>/node_modules/"],
+  bail: 1,
+  verbose: true,
 };
