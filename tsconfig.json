@@ -2,7 +2,7 @@
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "target": "ESNext",
-    "types": ["vite/client"],
+    "types": ["node"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -31,7 +31,9 @@
       "@assets": ["./assets/index"],
       "@enums": ["./enums/index"],
       "@providers": ["./providers/index"],
-      "@common": ["./common/index"]
+      "@common": ["./common/index"],
+      "@HOCs": ["./HOCs/index"],
+      "@containers": ["./containers/index"]
     }
   },
   "include": ["src"]
