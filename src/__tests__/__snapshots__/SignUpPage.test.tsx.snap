@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectMenu component Snap shot 1`] = `
+[
+  <div
+    className="auth-container"
+  >
+    <form
+      autoComplete="off"
+      className="register-form"
+      name="sign-up-form"
+      onSubmit={[Function]}
+    >
+      <div
+        className="lang-form-layout"
+      >
+        <div
+          className="select-menu "
+          style={
+            {
+              "background": undefined,
+              "color": undefined,
+            }
+          }
+        >
+          <select
+            className="select undefined"
+            onChange={[Function]}
+            value="en"
+          >
+            <option
+              value="en"
+            >
+              en
+            </option>
+            <option
+              value="vi"
+            >
+              vi
+            </option>
+          </select>
+        </div>
+      </div>
+      <div
+        className="register-form__heading"
+      >
+        <h1
+          className="title"
+        >
+          signUp
+        </h1>
+        <p
+          className="subtitle"
+        >
+          signUpPage.subTitle
+        </p>
+      </div>
+      <div
+        className="register-form__input-boxes"
+      >
+        <div
+          className="single-input-fields"
+        >
+          <label>
+            signUpPage.fullname
+          </label>
+          <input
+            className="input "
+            name="fullname"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="signUpPage.enterFullname"
+            style={
+              {
+                "background": undefined,
+                "color": undefined,
+              }
+            }
+            type="text"
+          />
+        </div>
+        <div
+          className="single-input-fields"
+        >
+          <label>
+            email
+          </label>
+          <input
+            className="input "
+            name="email"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="enterEmail"
+            style={
+              {
+                "background": undefined,
+                "color": undefined,
+              }
+            }
+            type="text"
+          />
+        </div>
+        <div
+          className="single-input-fields"
+        >
+          <label>
+            password
+          </label>
+          <input
+            className="input "
+            name="password"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="enterPassword"
+            style={
+              {
+                "background": undefined,
+                "color": undefined,
+              }
+            }
+            type="password"
+          />
+        </div>
+        <div
+          className="single-input-fields"
+        >
+          <label>
+            signUpPage.confirmation
+          </label>
+          <input
+            className="input "
+            name="confirmation"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="signUpPage.enterConfirmation"
+            style={
+              {
+                "background": undefined,
+                "color": undefined,
+              }
+            }
+            type="password"
+          />
+        </div>
+      </div>
+      <div
+        className="register-form__footer"
+      >
+        <p>
+          signUpPage.alreadyHaveAccount
+           
+          <a
+            href="/login"
+            onClick={[Function]}
+          >
+            signIn
+          </a>
+           
+          signUpPage.here
+        </p>
+        <button
+          className="button "
+          style={
+            {
+              "background": undefined,
+              "color": undefined,
+            }
+          }
+          type="submit"
+        >
+          signUp
+        </button>
+      </div>
+    </form>
+  </div>,
+  " ",
+  <div
+    className="toasts"
+  />,
+]
+`;
