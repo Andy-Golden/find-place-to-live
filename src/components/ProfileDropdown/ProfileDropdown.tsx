@@ -1,26 +1,41 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { useProfileDropdownPrepareHook } from "./helper";
 import type { IProfileDropdownProps } from "./interfaces";
 
-const ProfileDropdown = ({ username }: IProfileDropdownProps): JSX.Element => {
-  const { t } = useProfileDropdownPrepareHook();
+import "./styles.scss";
+
+const ProfileDropdown = ({
+  username,
+  onSignOut,
+}: IProfileDropdownProps): JSX.Element => {
+  const { t, isShow, onShowDropdown } = useProfileDropdownPrepareHook();
+
   return (
     <div className="btn-profile">
       <i className="fas fa-user"></i>
       <span>{username}</span>
-      <button type="button" className="btn-show-dropdown">
+      <button
+        type="button"
+        className="btn-show-dropdown"
+        onClick={onShowDropdown}
+      >
         {" "}
         <i className="fas fa-angle-down"></i>
       </button>
-      <ul className="dropdown dropdown--hide">
+      <ul
+        className={`dropdown ${isShow ? "dropdown--show" : "dropdown--hide"}`}
+      >
         <li className="dropdown-option">
           <i className="fas fa-info"></i>
-          <span>{t("info")}</span>
+          <span>
+            <Link to="/profile">{t("info")}</Link>
+          </span>
         </li>
         <li className="dropdown-option">
           <i className="fas fa-sign-out-alt"></i>
-          <span>Sign out</span>
+          <span onClick={onSignOut}>{t("signOut")}</span>
         </li>
       </ul>
     </div>

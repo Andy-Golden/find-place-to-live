@@ -6,6 +6,8 @@
   "enterPassword": "Enter password",
   "signUp": "Sign Up",
   "signIn": "Sign In",
+  "info": "Info",
+  "signOut": "Sign Out",
   "signUpPage": {
     "subTitle": "Create your account to get full access",
     "fullname": "Full name",

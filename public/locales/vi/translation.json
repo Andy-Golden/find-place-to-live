@@ -6,6 +6,8 @@
   "enterPassword": "Nhâp mật khẩu",
   "signUp": "Đăng ký",
   "signIn": "Đăng nhập",
+  "info": "Thông tin",
+  "signOut": "Đăng xuất",
   "signUpPage": {
     "subTitle": "Tạo tài khoản của bạn để có được toàn quyền truy cập",
     "fullname": "Họ và tên",

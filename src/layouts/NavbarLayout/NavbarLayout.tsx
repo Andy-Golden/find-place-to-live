@@ -3,12 +3,12 @@ import { Link, Outlet } from "react-router-dom";
 
 import Logo from "@assets/images/5place2live.png";
 import { SelectLanguage } from "@common";
-import { Button } from "@components";
+import { Button, ProfileDropdown } from "@components";
 
 import "./styles.scss";
 
 const NavbarLayout = (): JSX.Element => {
-  const [user] = useState(true);
+  const [user] = useState(false);
 
   return (
     <div className="container">
@@ -40,30 +40,19 @@ const NavbarLayout = (): JSX.Element => {
                 <Button type="button">
                   <Link to="/sign-in">Sign In</Link>
                 </Button>
-                <Button type="button">
+                <Button className="btn-signup" type="button">
                   <Link to="/sign-up">Sign Up</Link>
                 </Button>
               </>
             )}
             {!user && (
-              <div className="btn-profile">
-                <i className="fas fa-user"></i>
-                <span>Profile</span>
-                <button type="button" className="btn-show-dropdown">
-                  {" "}
-                  <i className="fas fa-angle-down"></i>
-                </button>
-                <ul className="dropdown dropdown--hide">
-                  <li className="dropdown-option">
-                    <i className="fas fa-info"></i>
-                    <span>Info</span>
-                  </li>
-                  <li className="dropdown-option">
-                    <i className="fas fa-sign-out-alt"></i>
-                    <span>Sign out</span>
-                  </li>
-                </ul>
-              </div>
+              <>
+                <div className="btn-notify">
+                  <i className="fas fa-bell"></i>
+                  <span className="badge">104</span>
+                </div>
+                <ProfileDropdown username="Profile" />
+              </>
             )}
             <SelectLanguage />
           </div>
