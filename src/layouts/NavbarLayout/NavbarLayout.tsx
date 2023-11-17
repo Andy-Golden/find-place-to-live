@@ -8,7 +8,7 @@ import { Button, ProfileDropdown } from "@components";
 import "./styles.scss";
 
 const NavbarLayout = (): JSX.Element => {
-  const [user] = useState(false);
+  const [user] = useState(true);
 
   return (
     <div className="container">
@@ -55,6 +55,11 @@ const NavbarLayout = (): JSX.Element => {
               </>
             )}
             <SelectLanguage />
+          </div>
+          <div className="right-side__menu-dropdown">
+            <button>
+              <img src="" />
+            </button>
           </div>
         </div>
       </nav>

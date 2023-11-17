@@ -54,6 +54,14 @@
         display: none;
       }
     }
+
+    @include tablet {
+      width: 30%;
+    }
+
+    @include mobile {
+      width: 30%;
+    }
   }
 
   .right-side {
@@ -108,14 +116,30 @@
           font-size: small;
         }
       }
+
+      @include tablet {
+        display: none;
+      }
+
+      @include mobile {
+        display: none;
+      }
     }
 
     @include tablet {
-      display: none;
+      width: 70%;
+      justify-content: flex-end;
     }
 
     @include mobile {
-      display: none;
+      width: 70%;
+      justify-content: flex-end;
+    }
+
+    &__menu-dropdown {
+      @include desktop {
+        display: none;
+      }
     }
   }
 
