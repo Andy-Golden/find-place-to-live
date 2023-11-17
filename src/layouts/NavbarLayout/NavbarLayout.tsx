@@ -38,10 +38,10 @@ const NavbarLayout = (): JSX.Element => {
               <>
                 {" "}
                 <Button type="button">
-                  <Link to="/signIn">Sign In</Link>
+                  <Link to="/sign-in">Sign In</Link>
                 </Button>
                 <Button type="button">
-                  <Link to="/signUp">Sign Up</Link>
+                  <Link to="/sign-up">Sign Up</Link>
                 </Button>
               </>
             )}

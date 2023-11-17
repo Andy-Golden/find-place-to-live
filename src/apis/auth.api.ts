@@ -1,5 +1,4 @@
 import type { ISignUpRequest, IUser } from "@interfaces";
-import type { FirebaseError } from "firebase/app";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { addDoc, collection } from "firebase/firestore";
 
@@ -33,7 +32,7 @@ const signUp = async (userSignUpRequest: ISignUpRequest): Promise<IUser> => {
       ...user,
     };
   } catch (error) {
-    const err = error as FirebaseError;
+    const err = error as Error;
     throw new Error(err.message);
   }
 };

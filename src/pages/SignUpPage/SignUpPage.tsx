@@ -20,6 +20,7 @@ const SignUpPage = (): JSX.Element => {
         <form
           autoComplete="off"
           className="register-form"
+          name="sign-up-form"
           // eslint-disable-next-line @typescript-eslint/no-misused-promises
           onSubmit={handleSubmit(onSubmit)}
         >
@@ -29,7 +30,7 @@ const SignUpPage = (): JSX.Element => {
           <div className="register-form__heading">
             <h1 className="title">{t("signUp")}</h1>
             <p>
-              {t("signUpPage.alreadyHaveAccount")}
+              {t("signUpPage.alreadyHaveAccount")}{" "}
               <Link to="/signIn">{t("signIn")}</Link> {t("signUpPage.here")}
             </p>
           </div>

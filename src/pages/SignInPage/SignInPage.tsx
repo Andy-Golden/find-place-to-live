@@ -26,7 +26,7 @@ const SignInPage = (): JSX.Element => {
         <div className="login-form__heading">
           <h1 className="title">{t("signIn")}</h1>
           <p>
-            {t("signInPage.dontHaveAccount")}
+            {t("signInPage.dontHaveAccount")}{" "}
             <Link to="/signUp">{t("signUp")}</Link> {t("signInPage.here")}
           </p>
         </div>

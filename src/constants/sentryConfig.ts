@@ -1,5 +1,5 @@
 const sentryConfig = {
-  dns: process.env.REACT_APP_SENTRY_DNS,
+  dns: process.env.VITE_APP_SENTRY_DNS,
   tracePropagationTargets: ["localhost", /^https:\/\/yourserver\.io\/api/],
   tracesSampleRate: 1.0,
   replaysSessionSampleRate: 0.1,

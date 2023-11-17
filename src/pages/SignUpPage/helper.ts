@@ -30,7 +30,6 @@ const useSignUpPrepareHook = (): ISignUpPrepareHook => {
     try {
       setIsLoading(true);
       await signUp(data);
-      setIsLoading(false);
 
       toast.open(t(`message.successSignUp`), ToastStatus.SUCCESS);
       navigate("/");
@@ -39,6 +38,8 @@ const useSignUpPrepareHook = (): ISignUpPrepareHook => {
       toast.open(err.message, ToastStatus.ERROR);
       Sentry.captureException(err);
     }
+
+    setIsLoading(false);
   };
 
   return {

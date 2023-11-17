@@ -1,5 +1,4 @@
 import type { IUser } from "@interfaces";
-import type { FirebaseError } from "firebase/app";
 import { collection, getDocs } from "firebase/firestore";
 
 import { db } from "@server";
@@ -28,7 +27,7 @@ const getUsers = async (): Promise<IUser[]> => {
 
     return users;
   } catch (error) {
-    const err = error as FirebaseError;
+    const err = error as Error;
     throw new Error(err.message);
   }
 };

@@ -11,9 +11,7 @@ import type { ISelectPrepareHook } from "./interfaces";
 
 const useSelectLanguagePrepareHook = (): ISelectPrepareHook => {
   const { i18n } = useTranslation();
-
   const lang = useSelector((state: RootState) => state.langReducer.lang);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
